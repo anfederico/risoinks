@@ -1,0 +1,19 @@
+Package: risoinks
+Title: An R package for making riso ink color palettes
+Version: 1.0
+Author: anfederico <anfederico@github.com>
+Maintainer: anfederico <anfederico@github.com>
+Description: Risograph inks are soy-based and do not conform exactly to any color standards. Certain combinations look great in figures and presentations.
+Depends: R (>= 3.6.0)
+License: CC BY-NC 4.0
+URL: https://github.com/anfederico/risoinks
+Imports: 
+    ggplot2,
+    ggforce
+Encoding: UTF-8
+LazyData: false
+RoxygenNote: 7.1.1
+Suggests: 
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr

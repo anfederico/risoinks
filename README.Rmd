@@ -1,0 +1,102 @@
+---
+output: rmarkdown::github_document
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r echo=FALSE, message=FALSE}
+knitr::opts_chunk$set(message=FALSE, comment="#>", fig.align="left", fig.height=1, fig.width=10)
+devtools::load_all(".")
+```
+
+## Riso Ink Colors
+
+Color palettes were extracted from [Riso Ink Colors](https://www.stencil.wiki/colors)
+
+> Risograph inks are soy-based and do not conform exactly to any color standards. The listings below are approximates for reference only. Additionally, Riso inks are also slightly transparent and allow for variations in overprint and based on the color of paper they are printed on. 
+
+## Functions
+```{r}
+riso_names()
+```
+
+```{r}
+riso_color("indigo")
+```
+
+```{r}
+hex_transparacy("#484D7A", percent=0.5)
+```
+
+```{r}
+riso_color("indigo", alpha=0.5)
+```
+
+```{r}
+show_colors(riso_color("indigo"), "Indigo")
+```
+
+## Examples
+#### Shading 
+```{r}
+colors <- c(
+    riso_color("indigo", alpha=1),
+    riso_color("indigo", alpha=0.8),
+    riso_color("indigo", alpha=0.6),
+    riso_color("indigo", alpha=0.4),
+    riso_color("indigo", alpha=0.2))
+    
+print(colors)
+show_colors(colors, "Indigo Shades")
+```
+
+#### Custom palettes 
+```{r}
+colors <- c(
+    riso_color("granite"),
+    riso_color("scarlet"),
+    riso_color("sunflower"),
+    riso_color("cornflower"),
+    riso_color("emerald"))
+
+show_colors(colors, "Bright Colors w/ NA")
+```
+
+```{r}
+colors <- c(
+    riso_color("orchid"),
+    riso_color("violet"),
+    riso_color("grape"),
+    riso_color("plum"),
+    riso_color("midnight"))
+
+show_colors(colors, "Purples")
+```
+
+```{r}
+colors <- c(
+    riso_color("midnight"),
+    riso_color("turquoise", alpha=0.8),
+    riso_color("violet", alpha=0.9),
+    riso_color("scarlet", alpha=0.8),
+    riso_color("apricot", alpha=0.9),
+    riso_color("cornflower", alpha=0.9),
+    riso_color("charcoal", alpha=0.2))
+
+show_colors(colors, "Halcyon-esque")
+```
+
+## Available Colors
+All available colors at 100%, 75%, 50%, and 25% transparency
+```{r, echo=FALSE}
+for (name in riso_names()) {
+    colors <- c(
+        riso_color(name, alpha=1.00),
+        riso_color(name, alpha=0.75),
+        riso_color(name, alpha=0.50),
+        riso_color(name, alpha=0.25))
+    
+    print(show_colors(colors, name))
+}
+```
+

@@ -1,8 +1,7 @@
 
 ## Riso Ink Colors
 
-Color palettes were extracted from [Riso Ink
-Colors](https://www.stencil.wiki/colors)
+Color palettes were extracted from [Riso Ink Colors](https://www.stencil.wiki/colors). The website text is licensed under [CC BY-NC 3.0 US](https://creativecommons.org/licenses/by-nc/3.0/us/).
 
 > Risograph inks are soy-based and do not conform exactly to any color
 > standards. The listings below are approximates for reference only.
